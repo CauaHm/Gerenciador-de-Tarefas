@@ -35,18 +35,38 @@ main {
     
 }
 
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .task {
     display: flex;
     border: 1px solid black;
     padding: 10px 5px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.218);
     justify-content: space-between;
+    cursor: pointer;
 }
 
-.task span {
+.task:hover {
+    background-color: black;
+    color: rgb(255, 217, 0);
+    transition: .2s;
+}
+
+.task label {
     display: flex;
     gap: 50px;
+    width: 100%;
+    cursor: pointer;
 }
+
+label input[type="checkbox"]:checked + .p-task {
+    text-decoration: line-through;
+}
+
 
 .p-task {
     font-weight: bolder;
